@@ -1,0 +1,90 @@
+.flex-container {
+  height: 200px;
+  /* width: 100px; */
+  border: 10px solid;
+
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* gap: 20px; */
+
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: space-between;
+
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* align-items: baseline; */
+
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+.flex-item {
+  background-color: skyblue;
+  border: 2px solid steelblue;
+  /* width: 100px; */
+  flex-basis: 100px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  flex: 1 1 200px;
+}
+
+.flex-item:first-child {
+  /* background-color: brown; */
+  /* flex-grow: 3; */
+  /* flex-shrink: 3; */
+  order: 1;
+  /* align-self: stretch; */
+  font-size: 32px;
+}
+
+.flex-item:nth-child(2) {
+  /* background-color: blue; */
+  order: 2;
+  /* align-self: flex-end; */
+}
+
+.flex-item:nth-child(3) {
+  /* flex-grow: 2; */
+  order: 3;
+}
+
+.flex-item:nth-child(4) {
+  order: 4;
+  /* align-self: flex-start; */
+}
+
+.flex-item:last-child {
+  /* background-color: green; */
+  order: 5;
+}
+
+h1,
+p {
+  background-color: red;
+  height: 50px;
+  width: 200px;
+  display: inline;
+  display: block;
+  display: inline-block;
+}
+
+a,
+label {
+  background-color: blue;
+  width: 200px;
+  height: 100px;
+  display: block;
+  display: inline-block;
+  margin: 10px;
+}
