@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      .box {
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 2;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-direction: alternate;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+
+        animation: move 5s linear 1 forwards;
+      }
+
+      .hero {
+        text-align: center;
+        position: relative;
+        animation: hero-entry 5s forwards;
+      }
+
+      .hero .img {
+        width: 200px;
+        height: 400px;
+        overflow: hidden;
+        margin: auto;
+        transform: scale(0);
+        animation: img-scale 2s ease 5s forwards;
+      }
+
+      .hero .img img {
+        height: 100%;
+        width: 100%;
+      }
+
+      @keyframes img-scale {
+        from {
+          transform: scale(0);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes hero-entry {
+        from {
+          left: -1000px;
+          opacity: 0;
+        }
+
+        to {
+          left: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes move {
+        /* from {
+          left: 0;
+        }
+        to {
+          left: calc(100% - 50px);
+        } */
+
+        0% {
+          background-color: black;
+          left: 0;
+        }
+
+        20% {
+          background-color: green;
+        }
+
+        40% {
+          background-color: yellow;
+        }
+
+        60% {
+          background-color: orange;
+        }
+
+        80% {
+          background-color: red;
+        }
+
+        100% {
+          background-color: blue;
+          left: calc(100% - 50px);
+          transform: rotate3d(1, 2, 3, 180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <hr />
+    <div class="hero">
+      <h3>Hello, I am a</h3>
+      <h1>Software Engineer</h1>
+      <div class="img">
+        <img
+          src="https://images.unsplash.com/photo-1793034574913-b8c21bbd13fb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

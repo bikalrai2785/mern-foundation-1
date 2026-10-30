@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: steelblue;
+        padding: 20px;
+        margin: 20px auto;
+        /* transition-property: background-color; */
+        /* transition-duration: 2s; */
+        /* transition-delay: 1s; */
+        /* transition-timing-function: ease-in-out; */
+        /* transition: background-color 1s 2s ease-in; */
+        /* transition:
+          background-color 1s ease-in,
+          transform 1s linear; */
+
+        /* transition: all 1s ease-in; */
+
+        /* transition: 2s; */
+
+        transition: transform 1s;
+        box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 1);
+      }
+
+      .box:first-child:active {
+        background-color: skyblue;
+        transform: translateX(50px);
+        transform: translateX(-50px);
+      }
+
+      .box:nth-child(2):hover {
+        transform: translateY(50px);
+        transform: translateY(-50px);
+      }
+
+      .box:nth-child(3):hover {
+        transform: perspective(100px) translateZ(50px);
+        transform: perspective(700px) translateZ(-50px);
+      }
+
+      .box:nth-child(4):hover {
+        transform: perspective(200px) translate3d(50px, 50px, 50px);
+        transform: perspective(200px) translate3d(-50px, -50px, -50px);
+      }
+
+      .box:nth-child(5):hover {
+        transform: rotateX(45deg);
+        transform: rotateX(-45deg);
+      }
+
+      .box:nth-child(6):hover {
+        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
+      }
+
+      .box:nth-child(7):hover {
+        transform: rotateZ(45deg);
+        transform: rotateZ(-45deg);
+      }
+
+      .box:nth-child(8):hover {
+        transform: rotate3d(1, 2, 3, 60deg);
+        transform: rotate3d(3, 2, 1, -120deg);
+      }
+
+      .box:nth-child(9):hover {
+        /* default value if 1 for scale */
+        transform: scaleX(0);
+      }
+
+      .box:nth-child(10):hover {
+        transform: scaleY(0.5);
+      }
+
+      .box:nth-child(11):hover {
+        transform: scale3d(1.5, 2, 0.5);
+      }
+
+      .box:nth-child(12):hover {
+        transform: skew(60deg);
+        transform: skewX(30deg);
+      }
+
+      .box:nth-child(13):hover {
+        transform: skewY(30deg);
+      }
+
+      .box:nth-child(14):hover {
+        transform: skew(20deg, 70deg);
+      }
+
+      .box:nth-child(15):hover {
+        transform: perspective(300px) rotate(180deg) scale3d(1.1, 2, 0.8);
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .card {
+        margin: auto;
+        width: 240px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        transition: 0.5s;
+      }
+
+      .card:hover {
+        transform: translateY(-20px);
+      }
+
+      .card .img {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .card .img img {
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+      }
+
+      .card .img img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+    <div class="box">13</div>
+    <div class="box">14</div>
+    <div class="box">15</div>
+
+    <hr />
+    <h2>example</h2>
+    <div class="card">
+      <div class="img">
+        <img
+          src="https://images.pexels.com/photos/2062555/pexels-photo-2062555.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="details">
+        <h3>Product</h3>
+        <p>Prodouct details here for your information</p>
+      </div>
+
+      <button type="button">View</button>
+    </div>
+  </body>
+</html>
