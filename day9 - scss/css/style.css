@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: black; }
+
+a {
+  text-decoration: none; }
+
+#products .products .product {
+  background-color: lightgray;
+  width: 280px; }
+  #products .products .product button {
+    background-color: white;
+    padding: 8px 20px;
+    transition: background-color 1s; }
+    #products .products .product button:hover {
+      background-color: #12def9;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25); }
+
+.items-item {
+  background-color: aqua; }
+  .items-item--img {
+    width: 50px;
+    height: 50px;
+    background-color: red; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+// variable declaration
+$primary-color: #12def9;
+
+$app-shadow-medium: 4px 4px 8px rgba(0, 0, 0, 0.25);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+// #prodcucts .products .product {
+//   background-color: lightgrey;
+// }
+
+#products {
+  .products {
+    .product {
+      background-color: lightgray;
+      width: 280px;
+
+      button {
+        background-color: white;
+        padding: 8px 20px;
+        transition: background-color 1s;
+
+        &:hover {
+          background-color: $primary-color;
+          box-shadow: $app-shadow-medium;
+        }
+      }
+    }
+  }
+}
+
+.items {
+  &-item {
+    background-color: aqua;
+
+    &--img {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+  }
+}
