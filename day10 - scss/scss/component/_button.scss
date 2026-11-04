@@ -1,0 +1,66 @@
+@use "../helper/variable" as vars;
+
+// .btn {
+//   border: none;
+//   background-color: vars.$primary-color;
+//   color: vars.$primary-light;
+//   cursor: pointer;
+//   padding: vars.$app-btn-padding-sm;
+//   border-radius: vars.$app-border-radius-sm;
+//   transition: background-color 0.5s;
+
+//   &:hover {
+//     background-color: vars.$secondary-color;
+//   }
+// }
+
+// mixins
+// @mixin btn {
+//   border: none;
+//   cursor: pointer;
+//   padding: vars.$app-btn-padding-sm;
+//   border-radius: vars.$app-border-radius-sm;
+//   transition: background-color 0.5s;
+// }
+
+// .primary-btn {
+//   @include btn;
+//   background-color: vars.$primary-color;
+//   color: vars.$primary-light;
+
+//   &:hover {
+//     background-color: vars.$secondary-color;
+//   }
+// }
+
+// .secondary-btn {
+//   @include btn;
+//   background-color: vars.$secondary-color;
+//   color: vars.$primary-light;
+
+//   &:hover {
+//     background-color: vars.$primary-color;
+//   }
+// }
+
+@mixin btn($bg-color, $color, $transition-bg) {
+  border: none;
+  background-color: $bg-color;
+  color: $color;
+  cursor: pointer;
+  padding: vars.$app-btn-padding-sm;
+  border-radius: vars.$app-border-radius-sm;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $transition-bg;
+  }
+}
+
+.primary-btn {
+  @include btn(vars.$primary-color, vars.$primary-light, vars.$accent-color);
+}
+
+.secondary-btn {
+  @include btn(vars.$accent-color, vars.$primary-color, black);
+}
